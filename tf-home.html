@@ -6,7 +6,7 @@ satisfaction: 1
     <div class="container">
         <div class="main-product-left span-12" style="padding-top:12px">
             <div class="product-logo-box">
-                <img class="product-icon" src="/shared/img/icons/{{page.product_title|downcase}}-64.png">
+              <img class="product-icon" src="/shared/img/icons/{{page.product_title|downcase|replace:' ','-'}}-64.png">
                 <div class="product-tagline">
                     <h1 class="product-title">{{page.product_title}}</h1>
                     {% if page.product_badge %}
@@ -20,21 +20,14 @@ satisfaction: 1
             </div>
             <div class="product-buttons-box">
                 <div class="product-buttons">
-                    <a href="http://downloads.binaryage.com/totalfinder-teaser.mov" id="teaser-link" rel="#teaser" class="button button-300 product-button-play">
-                        <div><div>Watch Video</div></div>
-                    </a>
                     <div id="download-link2" rel="#dwn" style="position: absolute; top:240px; width:1px; height:1px"></div>
                     <a href="{{page.download}}" id="download-link" rel="#dwn" class="button button-300 product-button-download">
-                        <div><div><div class="trial-note">14-day trial</div>{{page.downloadtitle}}<div class="product-specs">Requires OS X 10.6 (Snow Leopard)</div></div></div>
+                        <div><div><div class="trial-note">14-day trial</div>{{page.downloadtitle}}<div class="product-specs">Windows, Mac, and Linux</div></div></div>
                     </a>
                     <a href="https://sites.fastspring.com/binaryage/instant/totalfinder" id="buy-link" rel="#buy" class="button button-300 product-button-buy">
-                        <div><div>Buy it for $15 or $10<span class="buy-asterix">*</span></div></div>
+                        <div><div>Buy it for $20</div></div>
                     </a>
                     <div class="clear"></div>
-                </div>
-                <div class="reasons-to-buy">
-                    <a href="/free-licenses">I'm also giving away free licenses!</a><br>
-                    <a href="/reasons-to-buy">why should you buy otherwise?</a><br>
                 </div>
             </div>
         </div>
@@ -71,7 +64,7 @@ satisfaction: 1
             <div class="tf-product-actions-box-inner">
                 {% if page.retweet %}
                 <div class="retweet">
-                    <a href="http://twitter.com/share" class="twitter-share-button" data-count="vertical" data-via="binaryage">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>                
+                    <a href="http://twitter.com/share" class="twitter-share-button" data-count="vertical" data-via="binaryage">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
                 </div>
                 {% endif %}
                 {% if page.facebook and false %}
@@ -85,12 +78,6 @@ satisfaction: 1
                     $(".buzz").html(writeCapture.sanitize('<a title="Post on Google Buzz" class="google-buzz-button" href="http://www.google.com/buzz/post" data-button-style="normal-count" data-url="{{page.ogmeta.url}}" data-imageurl="{{page.ogmeta.image}}"></a><scr'+'ipt type="text/javascript" src="http://www.google.com/buzz/api/button.js"></scr'+'ipt>'));
                 </script>
                 {% endif %}
-                <a href="http://www.macupdate.com/info.php/id/33373/totalfinder">
-                    <div class="macupdate"></div>
-                </a>
-                <script>
-                    $(".macupdate").html(writeCapture.sanitize('<scri'+'pt type="text/javascript" src="http://www.macupdate.com/developers/badge/33373"></scr'+'ipt>'));
-                </script>
                 {% if page.usethis %}
                 <div class="usethis"></div>
                 <script>
@@ -104,9 +91,16 @@ satisfaction: 1
                 </script>
                 </div>
                 {% endif %}
+                <a href="http://www.appcelerator.com/"><img src="/images/titanium-badge.png" /></a>
             </div>
             <div class="clear"></div>
-        </div>    
+        </div>
+        <br />
+        <hr />
+        <br />
+        <div class="xrefresh-original">
+          <p>Looking for the (deprecated) XRefresh IE/Firefox extension for Windows? It's <a href="https://github.com/darwin/xrefresh/">available on GitHub</a>.</p>
+        </div>
     </div>
 </div>
 
